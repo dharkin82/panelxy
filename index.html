@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sparkbench — Design Your Own Control Panel | Motor, Cable & Panel Mimic Tools</title>
+<title>PanelXY — Smarter Panel Design | Motor Starter, Cable & Panel Mimic Tools</title>
 <meta name="description" content="Free browser-based tools to design a control panel from scratch: size motor starters (DOL, star-delta, soft start, VSD), size SWA/Y-CY/LAPP cables to BS 7671, and build a panel mimic you can export to PDF, DXF and print. Works offline, no login.">
 <meta name="keywords" content="control panel design, motor starter sizing, cable size calculator, BS 7671 cable calculator, panel mimic builder, DOL star delta soft starter VSD, electrical design tools">
-<meta property="og:title" content="Sparkbench — Design Your Own Control Panel">
+<meta property="og:title" content="PanelXY — Smarter Panel Design">
 <meta property="og:description" content="Size motors, size cables, build the panel mimic. Free electrical design tools that work in your browser.">
 <meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -53,7 +54,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,11,14,.82
 .brand .logo{width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,var(--spark),#0f7a40);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 0 18px rgba(31,192,106,.38)}
 .brand .logo svg{width:19px;height:19px}
 .brand b{color:var(--spark)}
-.brand .wm{display:inline}
+.brand .wm{display:inline;text-transform:uppercase;letter-spacing:.14em;font-weight:600}
+.brand .wm b{font-weight:800;color:var(--spark)}
+.brandlock{display:flex;flex-direction:column;gap:9px;margin-bottom:14px}
+.tagline{display:flex;align-items:center;gap:10px;font-family:var(--fh);font-size:10.5px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--muted)}
+.tagline::before,.tagline::after{content:'';height:1px;width:22px;background:var(--spark);opacity:.8}
 .nav-links{display:flex;align-items:center;gap:30px}
 .nav-links a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:500;transition:color .15s}
 .nav-links a:hover{color:var(--bright)}
@@ -206,8 +211,8 @@ footer{background:var(--bg2);border-top:1px solid var(--line);padding:46px 0 36p
 <nav>
   <div class="nav-in">
     <a class="brand" href="index.html">
-      <span class="logo"><svg viewBox="0 0 20 20" fill="none"><path d="M11 2L4 11h4l-1 7 7-9h-4l1-7z" fill="#06160d"/></svg></span>
-      <span class="wm">Spark<b>bench</b></span>
+      <span class="logo"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="3.5" width="16" height="17" rx="3" fill="#06160d"/><circle cx="9.3" cy="8.6" r="1.7" fill="#eafff3"/><circle cx="9.3" cy="13.8" r="1.7" fill="#eafff3"/><rect x="13" y="6.9" width="3" height="10.2" rx="1.5" fill="#37d98a"/></svg></span>
+      <span class="wm">Panel<b>XY</b></span>
     </a>
     <div class="nav-links">
       <a href="#workflow">How it works</a>
@@ -358,7 +363,7 @@ footer{background:var(--bg2);border-top:1px solid var(--line);padding:46px 0 36p
     <div class="sec-head">
       <p class="sec-eyebrow">Output that fits your process</p>
       <h2>Take it from browser to build</h2>
-      <p class="sec-sub">Sparkbench isn't a walled garden. Everything you design comes out in formats your workshop already uses.</p>
+      <p class="sec-sub">PanelXY isn't a walled garden. Everything you design comes out in formats your workshop already uses.</p>
     </div>
     <div class="feat-grid">
       <div class="fcard">
@@ -399,7 +404,7 @@ footer{background:var(--bg2);border-top:1px solid var(--line);padding:46px 0 36p
       <div>
         <p class="sec-eyebrow">Who it's for</p>
         <h2 style="margin-bottom:22px">Built by an electrician,<br>for the people on the tools</h2>
-        <p>Sizing a control panel usually means jumping between a spreadsheet, a manufacturer catalogue and a cable table — then redrawing the operator layout by hand. <strong>Sparkbench pulls it into one place.</strong></p>
+        <p>Sizing a control panel usually means jumping between a spreadsheet, a manufacturer catalogue and a cable table — then redrawing the operator layout by hand. <strong>PanelXY pulls it into one place.</strong></p>
         <p>Whether you're a panel builder quoting a job, a maintenance sparky swapping a starter, or a design engineer checking a run, the tools give you defensible numbers to a recognised standard and artwork you can actually use.</p>
         <p>It's free, it runs in any browser, and nothing you enter ever leaves your machine — so it's safe to use on client work.</p>
       </div>
@@ -431,10 +436,13 @@ footer{background:var(--bg2);border-top:1px solid var(--line);padding:46px 0 36p
   <div class="wrap">
     <div class="foot-in">
       <div class="foot-brand">
-        <a class="brand" href="index.html">
-          <span class="logo"><svg viewBox="0 0 20 20" fill="none"><path d="M11 2L4 11h4l-1 7 7-9h-4l1-7z" fill="#06160d"/></svg></span>
-          <span class="wm">Spark<b>bench</b></span>
-        </a>
+        <div class="brandlock">
+          <a class="brand" href="index.html">
+            <span class="logo"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="3.5" width="16" height="17" rx="3" fill="#06160d"/><circle cx="9.3" cy="8.6" r="1.7" fill="#eafff3"/><circle cx="9.3" cy="13.8" r="1.7" fill="#eafff3"/><rect x="13" y="6.9" width="3" height="10.2" rx="1.5" fill="#37d98a"/></svg></span>
+            <span class="wm">Panel<b>XY</b></span>
+          </a>
+          <div class="tagline">Smarter panel design</div>
+        </div>
         <p>Free electrical design tools for sizing motors, sizing cables and building control-panel mimics. Made in Northern Ireland.</p>
       </div>
       <div class="foot-cols">
@@ -453,7 +461,7 @@ footer{background:var(--bg2);border-top:1px solid var(--line);padding:46px 0 36p
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 Sparkbench · Belfast, Northern Ireland</span>
+      <span>© 2026 PanelXY · Belfast, Northern Ireland</span>
       <span>Calculations are a design aid — always verify against the current standard.</span>
     </div>
   </div>
